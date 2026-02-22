@@ -37,7 +37,7 @@ function showError(error) {
 function getWeather(lat, lon) {
     const apiKey = "65653edb0a94b3995401f66c2153a7d1"; // replace with your API key
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-
+document.getElementById("weatherDisplay").innerText = weather;
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -154,3 +154,4 @@ function logout() {
     });
 
 }
+
