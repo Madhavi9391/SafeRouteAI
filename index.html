@@ -29,7 +29,11 @@
         <input type="text" id="destination" placeholder="Enter Destination">
 
         <label>Weather:</label>
-        <p>Weather: <span id="weatherDisplay">Detecting...</span></p>
+       <select id="weather">
+    <option value="10">Clear</option>
+    <option value="30">Rainy</option>
+    <option value="50">Storm</option>
+</select>
 
         <label>Traffic:</label>
         <select id="traffic">
@@ -75,5 +79,6 @@ firebase.initializeApp(firebaseConfig);
 </body>
 
 </html>
+
 
 
