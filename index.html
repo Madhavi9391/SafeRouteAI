@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeRoute AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚨 SafeRoute AI</h1>
+    <p>AI-Based Accident Risk Prediction System</p>
+
+    <div class="card">
+        <h2>Register / Login</h2>
+
+<input type="email" id="email" placeholder="Enter Email">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="register()">Register</button>
+<button onclick="login()">Login</button>
+<button onclick="googleLogin()">Sign in with Google</button>
+
+<hr>
+<div id="dashboard" style="display:none;">
+
+    <h2>Enter Route Details</h2>
+        <input type="text" id="source" placeholder="Enter Source">
+        <input type="text" id="destination" placeholder="Enter Destination">
+
+        <label>Weather:</label>
+        <select id="weather">
+            <option value="10">Clear</option>
+            <option value="30">Rainy</option>
+            <option value="50">Storm</option>
+        </select>
+
+        <label>Traffic:</label>
+        <select id="traffic">
+            <option value="10">Low</option>
+            <option value="30">Medium</option>
+            <option value="50">High</option>
+        </select>
+
+        <label>Time of Day:</label>
+        <select id="time">
+            <option value="10">Morning</option>
+            <option value="20">Evening</option>
+            <option value="40">Night</option>
+        </select>
+
+        <button onclick="calculateRisk()">Predict Risk</button>
+
+        <div id="result"></div>
+        <button onclick="logout()">Logout</button>
+
+    </div>
+    </div>
+
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDy26NapT9OBqkRmSDdzyJN1vsJMD_LIdk",
+  authDomain: "saferouteai-51d69.firebaseapp.com",
+  projectId: "saferouteai-51d69",
+  storageBucket: "saferouteai-51d69.firebasestorage.app",
+  messagingSenderId: "453786322779",
+  appId: "1:453786322779:web:de84f3a6ace719aabfbc7e"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
