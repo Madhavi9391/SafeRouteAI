@@ -1,3 +1,5 @@
+window.weathervalue=10;
+window.trafficvalue=10;
 window.onload = function() {
     // Protect dashboard: only show if user is logged in and email verified
     firebase.auth().onAuthStateChanged(function(user) {
@@ -154,5 +156,6 @@ function logout() {
     });
 
 }
+
 
 
